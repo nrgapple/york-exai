@@ -24,6 +24,20 @@
       "summary": "Captures owner communication and approval preferences that shape automation behavior."
     },
     {
+      "id": "operator.joel_expectations",
+      "category": "operator",
+      "title": "York ExAI For Joel",
+      "path": "operator/README.md",
+      "summary": "Explains in Joel-facing language what York ExAI should handle day to day, what pain it should remove, and what is real now versus still coming."
+    },
+    {
+      "id": "operator.agent_writing_guide",
+      "category": "operator",
+      "title": "Joel-Facing Writing Guide",
+      "path": "operator/agent-writing-guide.md",
+      "summary": "Defines how future agents should write Joel-facing explanations without slipping into product or software-helpdesk language."
+    },
+    {
       "id": "domain.business_model",
       "category": "domain",
       "title": "Business Model",

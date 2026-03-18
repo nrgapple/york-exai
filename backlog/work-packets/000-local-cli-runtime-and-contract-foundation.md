@@ -32,6 +32,8 @@ If the first build starts from isolated feature code instead of one local runtim
 - `contracts/schema.md`
 - `contracts/events.md`
 - `architecture/system-overview.md`
+- `operator/README.md`
+- `operator/agent-writing-guide.md`
 - `validation/README.md`
 - `validation/evidence-matrix.md`
 
@@ -52,6 +54,7 @@ If the first build starts from isolated feature code instead of one local runtim
 - mutating command paths write event rows
 - backup captures both the database and artifact tree
 - future agents have a validation trust section that maps Joel-style workflows to CLI evidence
+- future agents have a Joel-facing expectations section that explains the local-first system in owner language without turning Joel into the CLI operator
 
 ## Risks And Compliance Notes
 

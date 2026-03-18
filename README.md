@@ -29,6 +29,11 @@ Validation and trust material for future agents now lives in:
 - `validation/evidence-matrix.md`
 - `validation/templates/run-report.md`
 
+Joel-facing expectation material now lives in:
+
+- `operator/README.md`
+- `operator/agent-writing-guide.md`
+
 ## What This Repo Is
 
 This is the source package and launchpad for York ExAI. It is not the finished software product.
@@ -81,11 +86,12 @@ If you need the deeper business framing, start with [domain/business-model.md](d
 
 Start here:
 
-1. [domain/business-model.md](domain/business-model.md)
-2. [backlog/roadmap.md](backlog/roadmap.md)
-3. [context/voice-and-tone.md](context/voice-and-tone.md)
+1. [operator/README.md](operator/README.md)
+2. [domain/business-model.md](domain/business-model.md)
+3. [backlog/roadmap.md](backlog/roadmap.md)
+4. [context/voice-and-tone.md](context/voice-and-tone.md)
 
-That will show you what this system is trying to do for the business, what gets built first, and how the agents are expected to talk and report back.
+That will show you what this system is supposed to do for Joel day to day, what it is trying to do for the business, what gets built first, and how the agents are expected to talk and report back.
 
 Joel-facing agents are expected to respect trade experience, feel like dependable coworkers, and quietly route Joel's feedback back into the product team and Adam's review path.
 
@@ -167,6 +173,7 @@ If you just need to know where truth lives:
 - agent skill packages: [skills/](skills/)
 - machine-readable context resources: [resources/](resources/)
 - recurring procedures: [runbooks/](runbooks/)
+- Joel-facing expectations and authoring rules: [operator/](operator/)
 - validation and CLI trust evidence: [validation/](validation/)
 - roadmap and implementation backlog: [backlog/](backlog/)
 - vendor boundaries and setup notes: [integrations/](integrations/)
