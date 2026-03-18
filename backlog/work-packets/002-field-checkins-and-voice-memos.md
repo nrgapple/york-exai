@@ -28,6 +28,12 @@ Joel should be able to hand over field truth without stopping the day to type. I
 
 ## Inputs And Contracts
 
+- foundation packet:
+  - `backlog/work-packets/000-local-cli-runtime-and-contract-foundation.md`
+- shared runtime contracts:
+  - `contracts/cli.md`
+  - `contracts/storage.md`
+  - `contracts/schema.md`
 - domain entities: `FieldCheckIn`, `VoiceMemo`, `Job`, `DocumentPacket`, `Task`, `FeedbackSignal`
 - workflow contracts:
   - `Field Check-In And Voice Memo Ingestion`
@@ -79,3 +85,14 @@ Joel should be able to hand over field truth without stopping the day to type. I
 - choosing the production speech-to-text vendor
 - outbound customer messaging
 - long-form field form design
+
+## Handoff Status
+
+- implementation surface: `york field`
+- depends on: packet 000 runtime and storage foundation, packet 001 route/job identity flow
+- implementation note: raw audio persistence and review-task fallback ship before any transcription adapter
+
+## Open Risks
+
+- low-confidence job matching could create review backlog if the route identity model is weak
+- transcript quality and extraction quality stay intentionally separate from the storage contract

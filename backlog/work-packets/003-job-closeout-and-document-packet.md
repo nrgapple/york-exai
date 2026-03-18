@@ -28,6 +28,12 @@ Closeout quality is the gate between field work and cash. If notes, prep evidenc
 
 ## Inputs And Contracts
 
+- foundation packet:
+  - `backlog/work-packets/000-local-cli-runtime-and-contract-foundation.md`
+- shared runtime contracts:
+  - `contracts/cli.md`
+  - `contracts/storage.md`
+  - `contracts/schema.md`
 - domain entities: `Job`, `Inspection`, `Treatment`, `DocumentPacket`, `PrepNotice`, `Task`, `Callback`
 - workflow contracts:
   - `Job Closeout And Documentation`
@@ -71,3 +77,14 @@ Closeout quality is the gate between field work and cash. If notes, prep evidenc
 - payment collection
 - full accounting workflow
 - customer portal document delivery
+
+## Handoff Status
+
+- implementation surface: `york closeout`
+- depends on: packets 000-002
+- implementation note: closeout rules should stay queryable in job and document-packet state, not hidden inside free-form packet notes
+
+## Open Risks
+
+- regulated paperwork rules for termite and WDI must stay conservative until explicit approval broadens automation
+- overloading voice memo summaries as closeout truth would create document quality drift

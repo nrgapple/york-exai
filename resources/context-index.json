@@ -148,6 +148,27 @@
       "title": "Backup And Restore",
       "path": "runbooks/backup-and-restore.md",
       "summary": "Backup and restore expectations for database and document storage."
+    },
+    {
+      "id": "validation.cli_trust",
+      "category": "validation",
+      "title": "CLI Validation And Trust",
+      "path": "validation/README.md",
+      "summary": "Defines how future agents should assess proven, degraded, and not-yet-proven York CLI behavior."
+    },
+    {
+      "id": "validation.joel_route_day_playbook",
+      "category": "validation",
+      "title": "Joel Route-Day Playbook",
+      "path": "validation/joel-route-day-playbook.md",
+      "summary": "Walks a full Joel-style route day through York CLI validation scenarios from startup through backup."
+    },
+    {
+      "id": "validation.evidence_matrix",
+      "category": "validation",
+      "title": "Validation Evidence Matrix",
+      "path": "validation/evidence-matrix.md",
+      "summary": "Maps validation scenarios to commands, expected outputs, events, artifacts, and pass criteria."
     }
   ]
 }

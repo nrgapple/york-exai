@@ -30,6 +30,12 @@ Route flow is the daily operating backbone. If urgent yellowjacket work, callbac
 
 ## Inputs And Contracts
 
+- foundation packet:
+  - `backlog/work-packets/000-local-cli-runtime-and-contract-foundation.md`
+- shared runtime contracts:
+  - `contracts/cli.md`
+  - `contracts/storage.md`
+  - `contracts/schema.md`
 - domain entities: `RouteDay`, `Job`, `Callback`, `Task`
 - workflow contracts:
   - `Route-Day Execution`
@@ -75,3 +81,14 @@ Route flow is the daily operating backbone. If urgent yellowjacket work, callbac
 - route optimization beyond simple ordered-stop management
 - customer-facing scheduling promises
 - invoice or ledger behavior
+
+## Handoff Status
+
+- implementation surface: `york route`
+- depends on: packet 000 runtime and schema foundation
+- implementation note: route ordering and urgent insert behavior should live in explicit `route_days` and `route_stops` records, not generic notes or schedule blobs
+
+## Open Risks
+
+- same-day inserts may bury specialty jobs if report ordering is weak
+- schedule risk signals will be weak until real duration assumptions are captured
