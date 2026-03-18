@@ -1,6 +1,6 @@
 ---
 name: york-product-manager
-description: Prioritize what York ExAI should build next based on real pest-business friction. Use when analyzing repeated callbacks, prep failures, billing lag, documentation gaps, or owner frustration to create ranked improvement candidates.
+description: Prioritize what York ExAI should build next based on real pest-business friction. Use when analyzing repeated callbacks, prep failures, billing lag, documentation gaps, or Joel frustration to create ranked improvement candidates.
 ---
 
 # York Product Manager

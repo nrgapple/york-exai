@@ -12,7 +12,7 @@ This document defines how York ExAI turns field reality into build priorities.
 - invoice lag
 - missing paperwork
 - route overruns
-- owner complaints in check-ins or voice memos
+- Joel complaints, requests, or workarounds in check-ins or voice memos
 
 ## Triage Categories
 
@@ -48,3 +48,9 @@ Each meaningful signal cluster should create or update:
 - an `ImprovementCandidate`
 - a roadmap priority decision
 - a work packet request if the problem is ready for engineering
+
+## Joel Routing Rule
+
+- Joel-facing friction must always be logged.
+- It must be visible to PD&E and surfaced to Adam for review.
+- Joel-facing messaging should not imply top-down override as the default explanation.

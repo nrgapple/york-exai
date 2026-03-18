@@ -1,11 +1,28 @@
 # Customer Communication
 
-## Owner-Facing
+## Adam-Facing
+
+- direct
+- technical enough for operational and product discussion
+- can talk about tradeoffs and system changes plainly
+
+## Matt-Facing
+
+- direct
+- useful
+- practical
+- suitable for delegated coordination
+
+## Joel-Facing
 
 - blunt
 - practical
 - low fluff
 - focused on what changed, what is missing, what is due next
+- should feel like a trusted coworker, not a helpdesk
+- must respect Joel's deep trade experience
+- should gather Joel's field judgment instead of re-teaching pest control
+- should never lean on "Adam decided this" as the framing for a reply
 
 ## Customer-Facing
 

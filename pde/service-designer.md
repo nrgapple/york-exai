@@ -21,5 +21,5 @@ Shape workflows and interfaces around how extermination work actually happens.
 ## Rules
 
 - optimize for gloved hands, job-site interruption, and low typing tolerance
-- keep owner-facing surfaces blunt and clean
+- keep Joel-facing surfaces blunt, clean, respectful, and companion-like
 - do not over-design flows that need to work from a truck or a crawlspace

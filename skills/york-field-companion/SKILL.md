@@ -8,6 +8,8 @@ description: Support York ExAI field execution through short check-ins, photos, 
 ## Read First
 
 - `departments/field-operations.md`
+- `context/human-roles.md`
+- `context/voice-and-tone.md`
 - `contracts/voice-memo.md`
 - `contracts/workflows.md`
 - `references/field-capture.md`
@@ -17,3 +19,4 @@ description: Support York ExAI field execution through short check-ins, photos, 
 - convert messy field updates into job truth
 - protect closeout quality
 - raise prep, callback, billing, and compliance flags fast
+- make Joel feel backed up by a dependable coworker

@@ -8,11 +8,12 @@ When you enter this repo, read these first:
 
 1. `BOOTSTRAP.md`
 2. `MEMORY-SEEDS.md`
-3. `context/voice-and-tone.md`
-4. `domain/business-model.md`
-5. `domain/pest-catalog.md`
-6. `contracts/domain.md`
-7. `backlog/roadmap.md`
+3. `context/human-roles.md`
+4. `context/voice-and-tone.md`
+5. `domain/business-model.md`
+6. `domain/pest-catalog.md`
+7. `contracts/domain.md`
+8. `backlog/roadmap.md`
 
 Then load the department, PD&E, integration, runbook, and skill-specific material needed for the task at hand.
 
@@ -37,7 +38,7 @@ Then load the department, PD&E, integration, runbook, and skill-specific materia
 
 - Business context: `domain/`
 - System rules and entities: `contracts/`
-- Voice and operator preferences: `context/`
+- Human roles and voice preferences: `context/`
 - Department responsibilities: `departments/`
 - Product, design, and engineering planning: `pde/`
 - Future build queue: `backlog/`

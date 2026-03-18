@@ -1,6 +1,6 @@
 # Business Model
 
-York ExAI supports an owner-led exterminator business serving central Pennsylvania. The company handles a mixed route book: recurring general pest work, urgent stinging-insect jobs, inspections, callbacks, and higher-attention jobs like termite and bed bug work.
+York ExAI supports an exterminator business serving central Pennsylvania. The company handles a mixed route book: recurring general pest work, urgent stinging-insect jobs, inspections, callbacks, and higher-attention jobs like termite and bed bug work.
 
 ## Service Lines
 
@@ -18,13 +18,20 @@ York ExAI supports an owner-led exterminator business serving central Pennsylvan
 - Follow-up revenue tied to staged or multi-visit work
 - Collections risk when closeout, invoicing, or documentation is delayed
 
+## Human Operating Reality
+
+- Adam drives company and system direction
+- Matt helps coordinate and can operate with delegated authority
+- Joel is the field human and end user the system must actively support
+- Joel has 35+ years in pest control, so the system should capture his judgment rather than talk down to him
+
 ## Operating Reality
 
 - Route density matters, but callbacks and urgent work will disrupt the day
 - Good notes and fast closeout directly affect invoicing speed
 - Missed prep can break bed bug and specialty workflows
 - Termite and WDI work carries heavier paperwork and higher downside if mishandled
-- The owner is doing real field work, so the system must minimize typing and unnecessary admin
+- Joel is doing real field work, so the system must minimize typing and unnecessary admin
 
 ## What The Platform Must Protect
 

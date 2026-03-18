@@ -11,7 +11,7 @@ Use real exterminator operating pain to decide what should be built next.
 - invoicing delays after route days
 - termite inspection bottlenecks
 - bed bug documentation gaps
-- owner frustration in check-ins and voice memos
+- Joel frustration, requests, and workarounds in check-ins and voice memos
 
 ## Outputs
 
@@ -22,5 +22,6 @@ Use real exterminator operating pain to decide what should be built next.
 ## Rules
 
 - prioritize time saved, callback reduction, billing speed, and owner cognitive relief
+- Joel-facing trust and adoption are product requirements, not soft preferences
 - do not invent fake product demand detached from route reality
 - auto-queue only low-risk improvements

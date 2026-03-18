@@ -1,6 +1,6 @@
 # York ExAI
 
-York ExAI is meant to take the weight of running a bug business off the owner's head without getting in the way of the actual work. For an exterminator outfit in central Pennsylvania, that means tighter route days, fewer missed callbacks, faster job closeout, quicker invoicing, cleaner records, and better follow-through on termite, bed bug, and other paperwork-heavy work. The point is not flashy software. The point is to help the business stay buttoned up, get paid faster, and stop losing time to scattered admin.
+York ExAI is meant to take the weight of running a bug business off the humans who carry it without getting in the way of the actual work. For an exterminator outfit in central Pennsylvania, that means tighter route days, fewer missed callbacks, faster job closeout, quicker invoicing, cleaner records, and better follow-through on termite, bed bug, and other paperwork-heavy work. The point is not flashy software. The point is to help the business stay buttoned up, get paid faster, and stop losing time to scattered admin.
 
 This repo is the starting package for building that system. It gives future humans and agents the business context, operating rules, skill packages, and implementation backlog needed to turn York ExAI into a real operating system for a pest-control company.
 
@@ -17,7 +17,7 @@ It exists so future collaborators, OpenClaw agents, and Codex implementation age
 
 ## Business Context
 
-York ExAI is built for an owner-led exterminator business in central Pennsylvania, with York, Harrisburg, Lancaster, and nearby territory as the default operating assumption.
+York ExAI is built for an exterminator business in central Pennsylvania, with York, Harrisburg, Lancaster, and nearby territory as the default operating assumption.
 
 The business model behind this repo is not generic field service. It is pest-control work with real-world pressure around:
 
@@ -27,6 +27,12 @@ The business model behind this repo is not generic field service. It is pest-con
 - termite and wood-destroying insect inspections
 - bed bug prep, treatment, and reinspection
 - job closeout, invoicing, collections, and compliance-sensitive records
+
+This repo also models three human roles explicitly:
+
+- Adam: CEO, technical, and final authority on company and system changes
+- Matt: Adam's delegate and operational contact
+- Joel: owner and end user in the field, non-technical, blue-collar central PA, with 35+ years in pest control
 
 If you need the deeper business framing, start with [domain/business-model.md](domain/business-model.md), [domain/pest-catalog.md](domain/pest-catalog.md), and [domain/central-pa-operations.md](domain/central-pa-operations.md).
 
@@ -53,6 +59,8 @@ Start here:
 3. [context/voice-and-tone.md](context/voice-and-tone.md)
 
 That will show you what this system is trying to do for the business, what gets built first, and how the agents are expected to talk and report back.
+
+Joel-facing agents are expected to respect trade experience, feel like dependable coworkers, and quietly route Joel's feedback back into the product team and Adam's review path.
 
 ### A Planner Or PD&E Collaborator
 
