@@ -11,6 +11,8 @@ The York CLI is meant to run real route work, field capture, closeout, invoice h
 - proof that route, documentation, and billing protection hold under normal and degraded conditions
 - a standard way to record validation runs, drift, and unresolved risk
 
+The primary trust mechanism is now a compiled-binary E2E suite that runs the built `york` binary as a subprocess against a fresh temp runtime with a real SQLite file and real artifact files.
+
 ## Read Order
 
 1. `contracts/cli.md`
@@ -24,6 +26,7 @@ The York CLI is meant to run real route work, field capture, closeout, invoice h
 ## Trust Rules
 
 - Treat the CLI as the only supported machine-write interface in v1.
+- Treat compiled-binary E2E validation as stronger evidence than in-process helper coverage.
 - Do not trust unvalidated behavior just because a command exists.
 - Trust is strongest when command output, event history, artifact persistence, and business outcome all line up.
 - If a workflow affects compliance-sensitive documentation, closeout, or bookkeeping treatment, validation must prove the CLI blocks risky shortcuts instead of smoothing them over.
@@ -37,6 +40,7 @@ Use this label when a workflow has:
 
 - a documented scenario in the playbook
 - a matching evidence row
+- a compiled-binary E2E test that drives the real `york` binary
 - clear command sequence and expected outputs
 - durable artifact and event expectations
 - at least one recorded validation run with no unresolved blocking drift

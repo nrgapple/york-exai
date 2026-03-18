@@ -56,6 +56,30 @@ type Artifact struct {
 	SHA256           string `json:"sha256"`
 }
 
+type DocumentPacket struct {
+	ID                   string   `json:"id"`
+	JobID                string   `json:"job_id"`
+	Notes                string   `json:"notes"`
+	MediaIDs             []string `json:"media_ids"`
+	FormIDs              []string `json:"form_ids"`
+	FollowUpInstructions string   `json:"follow_up_instructions"`
+	CompletenessStatus   string   `json:"completeness_status"`
+	MissingItems         []string `json:"missing_items"`
+	PrepRequired         bool     `json:"prep_required"`
+	PrepComplete         bool     `json:"prep_complete"`
+	FollowUpPlan         string   `json:"follow_up_plan"`
+	UpdatedAt            string   `json:"updated_at"`
+}
+
+type EventRecord struct {
+	ID         string         `json:"id"`
+	EventName  string         `json:"event_name"`
+	EntityType string         `json:"entity_type"`
+	EntityID   string         `json:"entity_id"`
+	OccurredAt string         `json:"occurred_at"`
+	Payload    map[string]any `json:"payload"`
+}
+
 type Task struct {
 	ID               string `json:"id"`
 	Owner            string `json:"owner"`
@@ -174,6 +198,11 @@ type CloseoutResult struct {
 	MissingItems     []string `json:"missing_items"`
 	FollowUpRequired []string `json:"follow_up_required"`
 	CallbackOpen     bool     `json:"callback_open"`
+}
+
+type CloseoutStatus struct {
+	Job            Job            `json:"job"`
+	DocumentPacket DocumentPacket `json:"document_packet"`
 }
 
 type InvoiceDraftResult struct {

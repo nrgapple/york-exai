@@ -6,6 +6,7 @@ This playbook explains York CLI validation in Joel terms. The point is not to te
 
 - use a fresh synthetic runtime home such as `/tmp/york-e2e`
 - invoke every command with `--json`
+- run the compiled `york` binary, not an in-process helper
 - do not write SQLite directly
 - use synthetic customer names, addresses, and artifact files
 - capture returned IDs from CLI responses instead of inventing them
@@ -134,6 +135,7 @@ york --json --home /tmp/york-e2e route add-stop --date 2026-03-18 --customer "Mi
 york --json --home /tmp/york-e2e closeout prep --job <bed_bug_job_id> --required=true --completed=false --follow-up-plan "Return after prep is completed."
 york --json --home /tmp/york-e2e closeout note --job <bed_bug_job_id> --service-summary "Prep incomplete on arrival." --treatment-notes "No clean treatment path today."
 york --json --home /tmp/york-e2e closeout evaluate --job <bed_bug_job_id>
+york --json --home /tmp/york-e2e closeout status --job <bed_bug_job_id>
 ```
 
 Trust outcome:
@@ -172,6 +174,7 @@ Validation flow:
 ```bash
 york --json --home /tmp/york-e2e route update-stop --stop-id <stop_id> --status unresolved --unresolved-reason "missed check-in"
 york --json --home /tmp/york-e2e report end-day --date 2026-03-18
+york --json --home /tmp/york-e2e report events --entity-type route_stop --entity-id <stop_id>
 ```
 
 Trust outcome:

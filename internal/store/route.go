@@ -155,13 +155,24 @@ func (s *Store) AddStop(ctx context.Context, input AddStopInput, urgent bool, re
 			if _, err := tx.ExecContext(
 				ctx,
 				`UPDATE route_stops
-				 SET position = position + 1, updated_at = ?
+				 SET position = position + 1000, updated_at = ?
 				 WHERE route_day_id = ? AND position >= ?`,
 				nowRFC3339(),
 				routeDayID,
 				position,
 			); err != nil {
-				return fmt.Errorf("shift urgent positions: %w", err)
+				return fmt.Errorf("shift urgent positions upward: %w", err)
+			}
+			if _, err := tx.ExecContext(
+				ctx,
+				`UPDATE route_stops
+				 SET position = position - 999, updated_at = ?
+				 WHERE route_day_id = ? AND position >= ?`,
+				nowRFC3339(),
+				routeDayID,
+				position+1000,
+			); err != nil {
+				return fmt.Errorf("normalize urgent positions: %w", err)
 			}
 		}
 

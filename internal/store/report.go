@@ -30,6 +30,9 @@ func (s *Store) MorningReport(ctx context.Context, routeDate string) (ReportSumm
 	if err := s.db.QueryRowContext(ctx, "SELECT COUNT(1) FROM invoice_drafts WHERE state = 'draft'").Scan(&report.InvoiceReady); err != nil {
 		return ReportSummary{}, fmt.Errorf("count invoice-ready drafts: %w", err)
 	}
+	if err := s.db.QueryRowContext(ctx, "SELECT COUNT(1) FROM invoice_drafts WHERE state = 'hold'").Scan(&report.InvoiceHolds); err != nil {
+		return ReportSummary{}, fmt.Errorf("count invoice holds: %w", err)
+	}
 	if err := s.db.QueryRowContext(ctx, "SELECT COUNT(1) FROM tasks WHERE resolution_state = 'open'").Scan(&report.ReviewTaskCount); err != nil {
 		return ReportSummary{}, fmt.Errorf("count review tasks: %w", err)
 	}

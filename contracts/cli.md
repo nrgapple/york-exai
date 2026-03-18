@@ -52,6 +52,7 @@ The `york` CLI is the only supported machine-write interface for OpenClaw agents
 - `photo`
 - `prep`
 - `evaluate`
+- `status`
 
 ### `york billing`
 
@@ -65,6 +66,7 @@ The `york` CLI is the only supported machine-write interface for OpenClaw agents
 - `blocked-closeouts`
 - `callback-pressure`
 - `end-day`
+- `events`
 
 ### `york backup`
 
@@ -150,8 +152,10 @@ On failure:
 - `field voice` must keep raw audio, transcript, summary, and extracted facts separate.
 - `field voice` must create a review task instead of guessing when job linkage is unclear.
 - `closeout evaluate` must use job-type-aware rules.
+- `closeout status` is the read-only surface for job and document-packet closeout evidence.
 - `billing draft` may auto-create drafts only for `complete` closeout state.
 - `backup create` must package the database and artifact storage together.
+- `report events` is the read-only event evidence surface for validation and operator review.
 
 ## Validation References
 

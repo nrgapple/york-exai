@@ -667,6 +667,26 @@ func runCloseout(ctx context.Context, global globalFlags, args []string, stdout 
 		}
 		_ = writeResponse(stdout, global.JSON, Response{OK: ok, Code: "closeout.evaluate.ok", Message: "Closeout evaluation complete.", Data: result})
 		return exitCode
+	case "status":
+		fs := newFlagSet("closeout status")
+		jobID := fs.String("job", "", "Job ID.")
+		if err := fs.Parse(args[1:]); err != nil {
+			return usageError(stderr, global.JSON, err)
+		}
+		if *jobID == "" {
+			return usageError(stderr, global.JSON, errors.New("--job is required"))
+		}
+		status, err := rt.Store.GetCloseoutStatus(ctx, *jobID)
+		if err != nil {
+			return runtimeError(stderr, global.JSON, err)
+		}
+		_ = writeResponse(stdout, global.JSON, Response{
+			OK:      true,
+			Code:    "closeout.status.ok",
+			Message: "Closeout status ready.",
+			Data:    status,
+		})
+		return exitSuccess
 	default:
 		return usageError(stderr, global.JSON, fmt.Errorf("unknown closeout subcommand: %s", args[0]))
 	}
@@ -796,6 +816,25 @@ func runReport(ctx context.Context, global globalFlags, args []string, stdout io
 			return runtimeError(stderr, global.JSON, err)
 		}
 		_ = writeResponse(stdout, global.JSON, Response{OK: true, Code: "report.end_day.ok", Message: "End-of-day wrap ready.", Data: report})
+		return exitSuccess
+	case "events":
+		fs := newFlagSet("report events")
+		entityType := fs.String("entity-type", "", "Filter by entity type.")
+		entityID := fs.String("entity-id", "", "Filter by entity ID.")
+		eventName := fs.String("event-name", "", "Filter by event name.")
+		if err := fs.Parse(args[1:]); err != nil {
+			return usageError(stderr, global.JSON, err)
+		}
+		events, err := rt.Store.ListEvents(ctx, *entityType, *entityID, *eventName)
+		if err != nil {
+			return runtimeError(stderr, global.JSON, err)
+		}
+		_ = writeResponse(stdout, global.JSON, Response{
+			OK:      true,
+			Code:    "report.events.ok",
+			Message: "Event history ready.",
+			Data:    events,
+		})
 		return exitSuccess
 	default:
 		return usageError(stderr, global.JSON, fmt.Errorf("unknown report subcommand: %s", args[0]))
