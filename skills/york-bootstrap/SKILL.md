@@ -14,6 +14,8 @@ This skill is for the first agent that needs to activate York ExAI from this rep
 - `MEMORY-SEEDS.md`
 - `context/human-roles.md`
 - `context/voice-and-tone.md`
+- `architecture/openclaw-workspace-bootstrap.md`
+- `resources/context-index.json`
 - `references/bootstrap-guide.md`
 
 ## Do

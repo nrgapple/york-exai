@@ -6,6 +6,7 @@ York ExAI is a future local-first operating system for an exterminator business.
 
 - Local source of truth for business logic, workflows, and work packets
 - OpenClaw-compatible skill packages for operational and build-side agents
+- Machine-readable context index for stable repo truth and MCP-style resource loaders
 - Codex-compatible implementation handoff for software build tasks
 - Clear split between domain knowledge, operations playbooks, and software backlog
 
@@ -23,3 +24,4 @@ York ExAI is a future local-first operating system for an exterminator business.
 - Must preserve a direct owner-facing voice
 - Must remain operable if optional integrations are unavailable
 - Must keep regulated workflow changes behind approval
+- Must keep the source package separate from the live OpenClaw workspace

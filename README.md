@@ -45,6 +45,7 @@ If you need the deeper business framing, start with [domain/business-model.md](d
 - `skills/`: OpenClaw-ready skill packages for business-side and build-side agents
 - `runbooks/`: recurring procedures for daily operations, finance review, closeout, and roadmap review
 - `integrations/`: Google Calendar, Stripe, QuickBooks, iMessage, and transcription boundaries
+- `resources/`: machine-readable context index for workspace loaders and MCP-style resource mapping
 - `backlog/`: build order and implementation-ready work packets
 - `templates/`: repeatable templates for ADRs, experiments, post-job reviews, workflow specs, and work packets
 
@@ -82,7 +83,9 @@ Start here:
 2. [contracts/domain.md](contracts/domain.md)
 3. [contracts/events.md](contracts/events.md)
 4. [backlog/work-packets](backlog/work-packets/)
-5. [skills/york-implementation-orchestrator/SKILL.md](skills/york-implementation-orchestrator/SKILL.md)
+5. [architecture/openclaw-workspace-bootstrap.md](architecture/openclaw-workspace-bootstrap.md)
+6. [skills/york-product-planning/SKILL.md](skills/york-product-planning/SKILL.md)
+7. [skills/york-implementation-orchestrator/SKILL.md](skills/york-implementation-orchestrator/SKILL.md)
 
 Use the work packets as the entrypoint for build work. If the packet is not decision-complete, fix the packet before you start coding.
 
@@ -102,7 +105,9 @@ That is enough to understand what the business is, what the repo is doing, and w
 
 This repo is structured so future agents can work without guessing.
 
-- OpenClaw agents use the local skill packages in `skills/` to take on specific roles like field companion, dispatch, billing, finance, product planning, and implementation orchestration.
+- OpenClaw agents use the local skill packages in `skills/`, but the active v1 package set is intentionally consolidated instead of mirroring every business function as a separate agent.
+- The active v1 OpenClaw package set is intentionally smaller: field companion, ops coordinator, back office, product planning, backend architect, and implementation orchestration.
+- `resources/context-index.json` exists so stable repo truth can be loaded as structured context instead of being rediscovered from scratch each run.
 - Codex is meant to pick up decision-complete implementation work from `backlog/work-packets/`.
 - The split between `domain/`, `contracts/`, `departments/`, `pde/`, and `backlog/` is intentional. It keeps business truth, operating behavior, and build work from getting mixed together.
 
@@ -132,6 +137,7 @@ If you just need to know where truth lives:
 - operating team charters: [departments/](departments/)
 - product, design, and engineering planning: [pde/](pde/)
 - agent skill packages: [skills/](skills/)
+- machine-readable context resources: [resources/](resources/)
 - recurring procedures: [runbooks/](runbooks/)
 - roadmap and implementation backlog: [backlog/](backlog/)
 - vendor boundaries and setup notes: [integrations/](integrations/)

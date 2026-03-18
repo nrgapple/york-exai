@@ -15,12 +15,20 @@ Set up the surrounding workspace so York ExAI agents can:
 ## First Actions
 
 1. Read `AGENTS.md`, `MEMORY-SEEDS.md`, `context/human-roles.md`, `context/voice-and-tone.md`, `domain/`, `contracts/`, and `backlog/roadmap.md`.
-2. If the surrounding OpenClaw workspace is missing `IDENTITY.md`, `USER.md`, `MEMORY.md`, daily memory files, or `HEARTBEAT.md`, create them using the workspace conventions.
-3. Copy or register the local skills from `skills/` into the workspace skill path that OpenClaw will use.
-4. Seed workspace memory with the facts in `MEMORY-SEEDS.md`.
-5. Confirm the field channel defaults to iMessage unless Joel overrides it.
-6. Review `integrations/` and identify what is configured, what is blocked, and what secrets or vendor accounts are still missing.
-7. Open or refresh implementation-ready work packets under `backlog/work-packets/` before any software build begins.
+2. Read `architecture/openclaw-workspace-bootstrap.md` and use it as the concrete setup checklist for the surrounding OpenClaw workspace.
+3. If the surrounding OpenClaw workspace is missing `IDENTITY.md`, `USER.md`, `MEMORY.md`, daily memory files, or `HEARTBEAT.md`, create them using the workspace conventions.
+4. Copy or register only the active v1 skills from `skills/` into the workspace skill path that OpenClaw will use:
+   - `york-bootstrap`
+   - `york-field-companion`
+   - `york-ops-coordinator`
+   - `york-back-office`
+   - `york-product-planning`
+   - `york-backend-architect`
+   - `york-implementation-orchestrator`
+5. Seed workspace memory with the facts in `MEMORY-SEEDS.md` and index stable repo truth from `resources/context-index.json`.
+6. Confirm the field channel defaults to iMessage unless Joel overrides it.
+7. Review `integrations/` using the readiness sections to identify what is configured, what is blocked, and what secrets or vendor accounts are still missing.
+8. Open or refresh implementation-ready work packets under `backlog/work-packets/` before any software build begins.
 
 ## Non-Negotiables
 
@@ -46,6 +54,7 @@ You are done with bootstrap when:
 
 - the workspace knows what York ExAI is
 - the workspace understands Adam, Matt, and Joel
-- the right skills are available
-- the core docs are indexed in memory
+- the active v1 skills are available
+- the core docs are indexed in memory and listed in `resources/context-index.json`
+- the workspace binding and repo-vs-workspace boundary are documented clearly enough that another operator can repeat setup without guessing
 - the next implementation work is queued as decision-complete packets

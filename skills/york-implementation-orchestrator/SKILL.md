@@ -14,7 +14,7 @@ description: Orchestrate York ExAI software delivery with Codex or other coding 
 ## Before You Hand Work To Codex
 
 - confirm the packet is decision-complete
-- confirm scope, contracts, and acceptance criteria are explicit
+- confirm scope, contracts, decision rules, and acceptance criteria are explicit
 - confirm compliance-sensitive behavior is approved
 - confirm the packet names pest-control use cases, not generic placeholders
 

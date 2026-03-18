@@ -1,22 +1,20 @@
 # Agent Topology
 
-## Operating Agents
+## Active V1 Agent Packages
 
-- `Chief of Staff`: runs the owner's day, summarizes risk, assigns work
-- `Field Companion`: handles check-ins, voice memos, and field context
-- `Dispatch And Route`: manages route flow, follow-ups, and callbacks
-- `Billing And Collections`: moves closed work into invoice and payment state
-- `Finance And Tax`: keeps books, categories, export packs, and close procedures straight
-- `Document And Compliance`: guards paperwork quality and regulated records
-- `Growth And Content`: turns field work into education, seasonal content, and review prompts
+- `Field Companion`: handles check-ins, voice memos, field context, and Joel-facing capture
+- `Ops Coordinator`: covers route flow, carryover, callback pressure, document readiness triage, and owner-facing operating summaries
+- `Back Office`: covers invoice readiness, payment state, reconciliation, ledger cleanliness, and bookkeeping handoff
+- `Product Planning`: combines prioritization, workflow shaping, packet authoring, and validation of operational improvements
+- `Backend Architect`: stays on call for data contracts, event boundaries, and storage sequencing when a packet needs deeper design
 
-## PD&E Agents
+## Deferred Package
 
-- `Product Manager`: detects friction and prioritizes improvements
-- `Service Designer`: shapes workflows and interfaces around field reality
-- `Engineering Planner`: turns approved needs into decision-complete build packets
-- `QA Ops Analyst`: validates that changes reduced pain instead of moving it
-- `Backend Architect`: defines system boundaries, data contracts, and sequencing
+- `Growth And Content`: stays deferred until roadmap priority 7 is active and the core operations loop is stable
+
+## Coverage Rule
+
+Department and PD&E responsibilities still live in `departments/` and `pde/`. The v1 agent package set is intentionally smaller than the business function map so the workspace does not carry unnecessary routing overhead.
 
 ## Orchestration Rule
 

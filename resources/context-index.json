@@ -1,0 +1,153 @@
+{
+  "version": 1,
+  "description": "Stable York ExAI repo context for workspace loaders and MCP-style resource mapping.",
+  "resources": [
+    {
+      "id": "context.human_roles",
+      "category": "context",
+      "title": "Human Roles",
+      "path": "context/human-roles.md",
+      "summary": "Defines Adam, Matt, and Joel plus Joel interaction and feedback routing rules."
+    },
+    {
+      "id": "context.voice_and_tone",
+      "category": "context",
+      "title": "Voice And Tone",
+      "path": "context/voice-and-tone.md",
+      "summary": "Defines Adam-facing, Matt-facing, Joel-facing, dashboard, customer, and planning voice rules."
+    },
+    {
+      "id": "context.owner_preferences",
+      "category": "context",
+      "title": "Owner Operating Preferences",
+      "path": "context/owner-operating-preferences.md",
+      "summary": "Captures owner communication and approval preferences that shape automation behavior."
+    },
+    {
+      "id": "domain.business_model",
+      "category": "domain",
+      "title": "Business Model",
+      "path": "domain/business-model.md",
+      "summary": "Explains service lines, revenue model, operating reality, and platform protections."
+    },
+    {
+      "id": "domain.central_pa_operations",
+      "category": "domain",
+      "title": "Central PA Operations",
+      "path": "domain/central-pa-operations.md",
+      "summary": "Defines route geography and operating assumptions for York, Harrisburg, Lancaster, and nearby territory."
+    },
+    {
+      "id": "domain.compliance_scope",
+      "category": "domain",
+      "title": "Compliance Scope",
+      "path": "domain/compliance-scope.md",
+      "summary": "Defines approval-required areas and safe planning areas for pest-control workflow changes."
+    },
+    {
+      "id": "domain.customer_communication",
+      "category": "domain",
+      "title": "Customer Communication",
+      "path": "domain/customer-communication.md",
+      "summary": "Captures tone and expectations for customer-facing messaging."
+    },
+    {
+      "id": "domain.pest_catalog",
+      "category": "domain",
+      "title": "Pest Catalog",
+      "path": "domain/pest-catalog.md",
+      "summary": "Lists pest-specific urgency, inspection, follow-up, documentation, and billing implications."
+    },
+    {
+      "id": "domain.terminology",
+      "category": "domain",
+      "title": "Terminology",
+      "path": "domain/terminology.md",
+      "summary": "Defines preferred pest-control terminology and wording boundaries."
+    },
+    {
+      "id": "contracts.domain",
+      "category": "contracts",
+      "title": "Domain Contracts",
+      "path": "contracts/domain.md",
+      "summary": "Defines the core entities for York ExAI."
+    },
+    {
+      "id": "contracts.events",
+      "category": "contracts",
+      "title": "Event Contracts",
+      "path": "contracts/events.md",
+      "summary": "Defines approved event names for operational state, analytics, and roadmap signals."
+    },
+    {
+      "id": "contracts.voice_memo",
+      "category": "contracts",
+      "title": "Voice Memo Contract",
+      "path": "contracts/voice-memo.md",
+      "summary": "Defines required fields, processing rules, and output surfaces for field voice memos."
+    },
+    {
+      "id": "contracts.workflows",
+      "category": "contracts",
+      "title": "Workflow Contracts",
+      "path": "contracts/workflows.md",
+      "summary": "Defines route-day, field-capture, closeout, billing, callback, and specialty workflow expectations."
+    },
+    {
+      "id": "runbooks.morning_startup",
+      "category": "runbooks",
+      "title": "Morning Startup",
+      "path": "runbooks/morning-startup.md",
+      "summary": "Daily opening checklist for route, callbacks, paperwork, and billing risk."
+    },
+    {
+      "id": "runbooks.route_day_management",
+      "category": "runbooks",
+      "title": "Route-Day Management",
+      "path": "runbooks/route-day-management.md",
+      "summary": "Operational checklist for ordered route execution, urgent inserts, and carryover handling."
+    },
+    {
+      "id": "runbooks.end_of_day_close",
+      "category": "runbooks",
+      "title": "End-Of-Day Close",
+      "path": "runbooks/end-of-day-close.md",
+      "summary": "Checklist for unresolved work, closeout readiness, and invoice draft queuing."
+    },
+    {
+      "id": "runbooks.missed_checkin_recovery",
+      "category": "runbooks",
+      "title": "Missed Check-In Recovery",
+      "path": "runbooks/missed-checkin-recovery.md",
+      "summary": "Recovery path when a stop misses its expected field check-in."
+    },
+    {
+      "id": "runbooks.weekly_finance_review",
+      "category": "runbooks",
+      "title": "Weekly Finance Review",
+      "path": "runbooks/weekly-finance-review.md",
+      "summary": "Weekly review of unsent invoices, aging balances, expenses, and billing holds."
+    },
+    {
+      "id": "runbooks.month_end_close",
+      "category": "runbooks",
+      "title": "Month-End Close",
+      "path": "runbooks/month-end-close.md",
+      "summary": "Monthly reconciliation and accountant handoff preparation."
+    },
+    {
+      "id": "runbooks.roadmap_review",
+      "category": "runbooks",
+      "title": "Roadmap Review",
+      "path": "runbooks/roadmap-review.md",
+      "summary": "Procedure for grouping friction signals and promoting decision-ready work."
+    },
+    {
+      "id": "runbooks.backup_and_restore",
+      "category": "runbooks",
+      "title": "Backup And Restore",
+      "path": "runbooks/backup-and-restore.md",
+      "summary": "Backup and restore expectations for database and document storage."
+    }
+  ]
+}

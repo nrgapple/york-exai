@@ -10,6 +10,8 @@
 
 ## Inputs And Contracts
 
+## Decision Rules And Ambiguity Handling
+
 ## Acceptance Criteria
 
 ## Risks And Compliance Notes
