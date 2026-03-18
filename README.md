@@ -4,6 +4,36 @@ York ExAI is meant to take the weight of running a bug business off the humans w
 
 This repo is the starting package for building that system. It gives future humans and agents the business context, operating rules, skill packages, and implementation backlog needed to turn York ExAI into a real operating system for a pest-control company.
 
+## Current Runtime Direction
+
+The first executable York ExAI slice now lives in this repo as a local-first Go CLI:
+
+- `cmd/york/`: entrypoint for the local `york` binary
+- `internal/app/`: runtime home, artifact persistence, and backup logic
+- `internal/store/`: SQLite schema and workflow persistence for route, field, closeout, billing, reporting, and backup state
+- `internal/cli/`: command parsing, JSON responses, and CLI integration tests
+
+Shared runtime contracts live in:
+
+- `architecture/adrs/001-local-cli-runtime.md`
+- `contracts/cli.md`
+- `contracts/storage.md`
+- `contracts/schema.md`
+
+The intended v1 shape is one local binary, SQLite, filesystem-backed artifacts, and optional integrations outside the core.
+
+Validation and trust material for future agents now lives in:
+
+- `validation/README.md`
+- `validation/joel-route-day-playbook.md`
+- `validation/evidence-matrix.md`
+- `validation/templates/run-report.md`
+
+Joel-facing expectation material now lives in:
+
+- `operator/README.md`
+- `operator/agent-writing-guide.md`
+
 ## What This Repo Is
 
 This is the source package and launchpad for York ExAI. It is not the finished software product.
@@ -46,6 +76,7 @@ If you need the deeper business framing, start with [domain/business-model.md](d
 - `runbooks/`: recurring procedures for daily operations, finance review, closeout, and roadmap review
 - `integrations/`: Google Calendar, Stripe, QuickBooks, iMessage, and transcription boundaries
 - `resources/`: machine-readable context index for workspace loaders and MCP-style resource mapping
+- `validation/`: end-to-end trust material for the CLI, including Joel-style scenarios, evidence expectations, and validation run records
 - `backlog/`: build order and implementation-ready work packets
 - `templates/`: repeatable templates for ADRs, experiments, post-job reviews, workflow specs, and work packets
 
@@ -55,11 +86,12 @@ If you need the deeper business framing, start with [domain/business-model.md](d
 
 Start here:
 
-1. [domain/business-model.md](domain/business-model.md)
-2. [backlog/roadmap.md](backlog/roadmap.md)
-3. [context/voice-and-tone.md](context/voice-and-tone.md)
+1. [operator/README.md](operator/README.md)
+2. [domain/business-model.md](domain/business-model.md)
+3. [backlog/roadmap.md](backlog/roadmap.md)
+4. [context/voice-and-tone.md](context/voice-and-tone.md)
 
-That will show you what this system is trying to do for the business, what gets built first, and how the agents are expected to talk and report back.
+That will show you what this system is supposed to do for Joel day to day, what it is trying to do for the business, what gets built first, and how the agents are expected to talk and report back.
 
 Joel-facing agents are expected to respect trade experience, feel like dependable coworkers, and quietly route Joel's feedback back into the product team and Adam's review path.
 
@@ -86,6 +118,7 @@ Start here:
 5. [architecture/openclaw-workspace-bootstrap.md](architecture/openclaw-workspace-bootstrap.md)
 6. [skills/york-product-planning/SKILL.md](skills/york-product-planning/SKILL.md)
 7. [skills/york-implementation-orchestrator/SKILL.md](skills/york-implementation-orchestrator/SKILL.md)
+8. [validation/README.md](validation/README.md)
 
 Use the work packets as the entrypoint for build work. If the packet is not decision-complete, fix the packet before you start coding.
 
@@ -109,6 +142,7 @@ This repo is structured so future agents can work without guessing.
 - The active v1 OpenClaw package set is intentionally smaller: field companion, ops coordinator, back office, product planning, backend architect, and implementation orchestration.
 - `resources/context-index.json` exists so stable repo truth can be loaded as structured context instead of being rediscovered from scratch each run.
 - Codex is meant to pick up decision-complete implementation work from `backlog/work-packets/`.
+- Future agents should use `validation/` to decide what CLI behavior is already trustworthy versus only partially proven.
 - The split between `domain/`, `contracts/`, `departments/`, `pde/`, and `backlog/` is intentional. It keeps business truth, operating behavior, and build work from getting mixed together.
 
 If you need the exact agent startup rules, use [AGENTS.md](AGENTS.md).
@@ -139,6 +173,8 @@ If you just need to know where truth lives:
 - agent skill packages: [skills/](skills/)
 - machine-readable context resources: [resources/](resources/)
 - recurring procedures: [runbooks/](runbooks/)
+- Joel-facing expectations and authoring rules: [operator/](operator/)
+- validation and CLI trust evidence: [validation/](validation/)
 - roadmap and implementation backlog: [backlog/](backlog/)
 - vendor boundaries and setup notes: [integrations/](integrations/)
 

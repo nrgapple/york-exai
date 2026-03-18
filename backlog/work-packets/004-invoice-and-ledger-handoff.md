@@ -28,6 +28,12 @@ Cash flow depends on clean handoff from field closeout into invoicing and reconc
 
 ## Inputs And Contracts
 
+- foundation packet:
+  - `backlog/work-packets/000-local-cli-runtime-and-contract-foundation.md`
+- shared runtime contracts:
+  - `contracts/cli.md`
+  - `contracts/storage.md`
+  - `contracts/schema.md`
 - domain entities: `InvoiceDraft`, `Payment`, `LedgerEntry`, `Job`, `DocumentPacket`, `Callback`
 - workflow contracts:
   - `Invoice Drafting And Reconciliation`
@@ -73,3 +79,14 @@ Cash flow depends on clean handoff from field closeout into invoicing and reconc
 - advanced tax automation
 - full QuickBooks sync implementation
 - customer collections strategy beyond basic invoice and payment state
+
+## Handoff Status
+
+- implementation surface: `york billing`
+- depends on: packets 000-003
+- implementation note: v1 billing should focus on invoice-ready gating and explicit holds; deeper payment and ledger flows can remain skeletal until the ops core is proven
+
+## Open Risks
+
+- accounting treatment changes remain approval-sensitive
+- invoice automation can drift into hidden callback write-offs if billing holds are not explicit and queryable
