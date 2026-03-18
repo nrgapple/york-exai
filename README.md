@@ -28,7 +28,7 @@ The business model behind this repo is not generic field service. It is pest-con
 - bed bug prep, treatment, and reinspection
 - job closeout, invoicing, collections, and compliance-sensitive records
 
-If you need the deeper business framing, start with [domain/business-model.md](/Users/adamgeiger/Downloads/pod-20260317/domain/business-model.md), [domain/pest-catalog.md](/Users/adamgeiger/Downloads/pod-20260317/domain/pest-catalog.md), and [domain/central-pa-operations.md](/Users/adamgeiger/Downloads/pod-20260317/domain/central-pa-operations.md).
+If you need the deeper business framing, start with [domain/business-model.md](domain/business-model.md), [domain/pest-catalog.md](domain/pest-catalog.md), and [domain/central-pa-operations.md](domain/central-pa-operations.md).
 
 ## What Is Already In The Repo
 
@@ -48,9 +48,9 @@ If you need the deeper business framing, start with [domain/business-model.md](/
 
 Start here:
 
-1. [domain/business-model.md](/Users/adamgeiger/Downloads/pod-20260317/domain/business-model.md)
-2. [backlog/roadmap.md](/Users/adamgeiger/Downloads/pod-20260317/backlog/roadmap.md)
-3. [context/voice-and-tone.md](/Users/adamgeiger/Downloads/pod-20260317/context/voice-and-tone.md)
+1. [domain/business-model.md](domain/business-model.md)
+2. [backlog/roadmap.md](backlog/roadmap.md)
+3. [context/voice-and-tone.md](context/voice-and-tone.md)
 
 That will show you what this system is trying to do for the business, what gets built first, and how the agents are expected to talk and report back.
 
@@ -58,11 +58,11 @@ That will show you what this system is trying to do for the business, what gets 
 
 Start here:
 
-1. [BOOTSTRAP.md](/Users/adamgeiger/Downloads/pod-20260317/BOOTSTRAP.md)
-2. [contracts/domain.md](/Users/adamgeiger/Downloads/pod-20260317/contracts/domain.md)
-3. [contracts/workflows.md](/Users/adamgeiger/Downloads/pod-20260317/contracts/workflows.md)
-4. [pde/triage-system.md](/Users/adamgeiger/Downloads/pod-20260317/pde/triage-system.md)
-5. [backlog/roadmap.md](/Users/adamgeiger/Downloads/pod-20260317/backlog/roadmap.md)
+1. [BOOTSTRAP.md](BOOTSTRAP.md)
+2. [contracts/domain.md](contracts/domain.md)
+3. [contracts/workflows.md](contracts/workflows.md)
+4. [pde/triage-system.md](pde/triage-system.md)
+5. [backlog/roadmap.md](backlog/roadmap.md)
 
 That gives you the business operating model, the workflow contracts, and the rules for deciding what should be built next.
 
@@ -70,11 +70,11 @@ That gives you the business operating model, the workflow contracts, and the rul
 
 Start here:
 
-1. [BOOTSTRAP.md](/Users/adamgeiger/Downloads/pod-20260317/BOOTSTRAP.md)
-2. [contracts/domain.md](/Users/adamgeiger/Downloads/pod-20260317/contracts/domain.md)
-3. [contracts/events.md](/Users/adamgeiger/Downloads/pod-20260317/contracts/events.md)
-4. [backlog/work-packets](/Users/adamgeiger/Downloads/pod-20260317/backlog/work-packets)
-5. [skills/york-implementation-orchestrator/SKILL.md](/Users/adamgeiger/Downloads/pod-20260317/skills/york-implementation-orchestrator/SKILL.md)
+1. [BOOTSTRAP.md](BOOTSTRAP.md)
+2. [contracts/domain.md](contracts/domain.md)
+3. [contracts/events.md](contracts/events.md)
+4. [backlog/work-packets](backlog/work-packets/)
+5. [skills/york-implementation-orchestrator/SKILL.md](skills/york-implementation-orchestrator/SKILL.md)
 
 Use the work packets as the entrypoint for build work. If the packet is not decision-complete, fix the packet before you start coding.
 
@@ -82,11 +82,11 @@ Use the work packets as the entrypoint for build work. If the packet is not deci
 
 If you are new to the repo and want the shortest useful read order, use this:
 
-1. [BOOTSTRAP.md](/Users/adamgeiger/Downloads/pod-20260317/BOOTSTRAP.md)
-2. [domain/business-model.md](/Users/adamgeiger/Downloads/pod-20260317/domain/business-model.md)
-3. [domain/pest-catalog.md](/Users/adamgeiger/Downloads/pod-20260317/domain/pest-catalog.md)
-4. [contracts/domain.md](/Users/adamgeiger/Downloads/pod-20260317/contracts/domain.md)
-5. [backlog/roadmap.md](/Users/adamgeiger/Downloads/pod-20260317/backlog/roadmap.md)
+1. [BOOTSTRAP.md](BOOTSTRAP.md)
+2. [domain/business-model.md](domain/business-model.md)
+3. [domain/pest-catalog.md](domain/pest-catalog.md)
+4. [contracts/domain.md](contracts/domain.md)
+5. [backlog/roadmap.md](backlog/roadmap.md)
 
 That is enough to understand what the business is, what the repo is doing, and what work comes first.
 
@@ -98,7 +98,7 @@ This repo is structured so future agents can work without guessing.
 - Codex is meant to pick up decision-complete implementation work from `backlog/work-packets/`.
 - The split between `domain/`, `contracts/`, `departments/`, `pde/`, and `backlog/` is intentional. It keeps business truth, operating behavior, and build work from getting mixed together.
 
-If you need the exact agent startup rules, use [AGENTS.md](/Users/adamgeiger/Downloads/pod-20260317/AGENTS.md).
+If you need the exact agent startup rules, use [AGENTS.md](AGENTS.md).
 
 ## Current Build Order
 
@@ -118,15 +118,15 @@ The reasoning is simple: the route has to run clean, field input has to be easy,
 
 If you just need to know where truth lives:
 
-- business and exterminator domain truth: [domain/](/Users/adamgeiger/Downloads/pod-20260317/domain)
-- system behavior and contracts: [contracts/](/Users/adamgeiger/Downloads/pod-20260317/contracts)
-- owner and voice preferences: [context/](/Users/adamgeiger/Downloads/pod-20260317/context)
-- operating team charters: [departments/](/Users/adamgeiger/Downloads/pod-20260317/departments)
-- product, design, and engineering planning: [pde/](/Users/adamgeiger/Downloads/pod-20260317/pde)
-- agent skill packages: [skills/](/Users/adamgeiger/Downloads/pod-20260317/skills)
-- recurring procedures: [runbooks/](/Users/adamgeiger/Downloads/pod-20260317/runbooks)
-- roadmap and implementation backlog: [backlog/](/Users/adamgeiger/Downloads/pod-20260317/backlog)
-- vendor boundaries and setup notes: [integrations/](/Users/adamgeiger/Downloads/pod-20260317/integrations)
+- business and exterminator domain truth: [domain/](domain/)
+- system behavior and contracts: [contracts/](contracts/)
+- owner and voice preferences: [context/](context/)
+- operating team charters: [departments/](departments/)
+- product, design, and engineering planning: [pde/](pde/)
+- agent skill packages: [skills/](skills/)
+- recurring procedures: [runbooks/](runbooks/)
+- roadmap and implementation backlog: [backlog/](backlog/)
+- vendor boundaries and setup notes: [integrations/](integrations/)
 
 ## Working Rules
 
@@ -136,4 +136,4 @@ If you just need to know where truth lives:
 - Use work packets before coding.
 - Do not let the README replace the deeper source-of-truth docs.
 
-For the agent-specific operating rules, use [AGENTS.md](/Users/adamgeiger/Downloads/pod-20260317/AGENTS.md).
+For the agent-specific operating rules, use [AGENTS.md](AGENTS.md).
